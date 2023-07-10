@@ -1,0 +1,2 @@
+# Just.EditorConfig
+EditorConfig demo
