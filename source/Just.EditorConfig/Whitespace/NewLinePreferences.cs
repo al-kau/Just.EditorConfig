@@ -6,6 +6,11 @@
         {
             /************************************
             // csharp_new_line_before_open_brace = all
+            //
+            // values: [accessors, anonymous_methods, anonymous_types, control_blocks, 
+            // events, indexers, lambdas, local_functions, methods, 
+            // object_collection_array_initializers, properties, types]
+            //
             void MyMethod()
             {
                 if (...)

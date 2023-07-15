@@ -87,6 +87,19 @@
             Console.WriteLine("");
         }
 
+        void csharp_space_between_method_call_parameter_list_parentheses()
+        {
+            /**********************************************
+            // csharp_space_between_method_call_parameter_list_parentheses = true
+            MyMethod( argument );
+
+            // csharp_space_between_method_call_parameter_list_parentheses = false
+            MyMethod(argument);
+            **********************************************/
+
+            MyMethod(5);
+        }
+
         void csharp_space_between_method_call_empty_parameter_list_parentheses()
         {
             /************************************************
@@ -213,6 +226,8 @@
             int index = numbers[0];
         }
 
+        // 'csharp_space_after_colon_in_inheritance_clause' option at the bottom of the file
+
         void csharp_space_after_comma()
         {
             /****************************************
@@ -252,6 +267,8 @@
             for (int i = 0; i < n; i++)
             { }
         }
+
+        // 'csharp_space_before_colon_in_inheritance_clause' option at the bottom of the file
 
         void csharp_space_before_comma()
         {
@@ -308,6 +325,9 @@
 
             return x * (x - y);
         }
+
+        private void MyMethod(int argument)
+        { }
     }
 
     /********************************************
@@ -364,6 +384,6 @@
 
     class C : I
     {
-
+        public int Field { get; set; }
     }
 }

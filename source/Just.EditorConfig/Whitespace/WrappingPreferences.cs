@@ -25,7 +25,7 @@
             string name = "John";
             ************************************/
 
-            int i = 0; string name = "John";
+            int i = 0; ++i; string name = "John"; string str = name.Trim();
         }
     }
 }
