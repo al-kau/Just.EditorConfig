@@ -48,7 +48,7 @@
             var f1 = this.Init();
             bool f2 = this.Init();
         }
-        
+
         bool Init()
         {
             return true;
