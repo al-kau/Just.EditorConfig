@@ -55,10 +55,10 @@ namespace Just.EditorConfig.NamingStyle
 
 
         //    Use PascalCase for class names and method names.
-        public static void AnyMethodName()
+        public static async Task AnyMethodNameAsync()
         {
             //    Use PascalCase for constant names, both fields and local constants.
-            const int localConstantName = 0;                                // rule: camel_case ???
+            const int LocalConstantName = 0;                                // rule: pascal_case
 
             //    Use camelCase for method arguments, local variables, and private fields.
             int localVariableName = LocalFunctionName();                    // rule: camel_case
@@ -67,6 +67,13 @@ namespace Just.EditorConfig.NamingStyle
             {
                 return 0;
             }
+
+            static async Task LocalAsyncFunctionNameAsync()                // rule: pascal_case, suffix Async
+            {
+                await Task.Delay(10);
+            }
+
+            await LocalAsyncFunctionNameAsync();
         }
 
         //    Use camelCase for method arguments, local variables, and private fields.
@@ -82,7 +89,7 @@ namespace Just.EditorConfig.NamingStyle
             await Task.Delay(100);
         }
 
-        private static async Task PrivateAsyncTaskMethodName()              // rule: pascal_case, ???
+        private static async Task PrivateAsyncTaskMethodNameAsync()              // rule: pascal_case, suffix Async
         {
             await Task.Delay(100);
         }
