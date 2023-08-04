@@ -411,7 +411,11 @@ dotnet_remove_unnecessary_suppression_exclusions = none
 
 
 
-#### Extra Files ####
+######## Extra Files ########
+
+# Generated files
+#[*{.generated.cs,.g.cs}]
+#generated_code = true
 
 # C++ Files
 [*.{cpp,h,in}]
