@@ -12,14 +12,47 @@ tab_width = 4
 indent_size = 4
 
 # New line preferences
-end_of_line = crlf
-insert_final_newline = false
+end_of_line = unset
+insert_final_newline = true
+
+trim_trailing_whitespace = true
 
 
 
-######## Xml files ########
-[*.xml]
+#### Extra Files ####
+
+# C++ Files
+[*.{cpp,h,in}]
+curly_bracket_next_line = true
+indent_brace_style = Allman
+
+# Xml project files
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
 indent_size = 2
+
+# Xml build files
+[*.builds]
+indent_size = 2
+
+# Xml files
+[*.{xml,stylecop,resx,ruleset}]
+indent_size = 2
+
+# Xml config files
+[*.{props,targets,config,nuspec}]
+indent_size = 2
+
+# Shell scripts
+[*.{sh,bash}]
+end_of_line = lf
+
+[*.{cmd,bat,ps1}]
+end_of_line = crlf
+
+# Markdown files
+[*.md]
+# Double trailing spaces can be used for BR tags, and other instances are enforced by Markdownlint
+trim_trailing_whitespace = false
 
 
 
@@ -153,6 +186,8 @@ csharp_style_var_elsewhere = false:silent
 
 ######## .NET Coding Conventions ########
 [*.{cs,vb}]
+
+charset = utf-8-bom
 
 #### Whitespace ####
 
