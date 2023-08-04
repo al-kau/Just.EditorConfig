@@ -19,46 +19,10 @@ trim_trailing_whitespace = true
 
 
 
-#### Extra Files ####
-
-# C++ Files
-[*.{cpp,h,in}]
-curly_bracket_next_line = true
-indent_brace_style = Allman
-
-# Xml project files
-[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
-indent_size = 2
-
-# Xml build files
-[*.builds]
-indent_size = 2
-
-# Xml files
-[*.{xml,stylecop,resx,ruleset}]
-indent_size = 2
-
-# Xml config files
-[*.{props,targets,config,nuspec}]
-indent_size = 2
-
-# Shell scripts
-[*.{sh,bash}]
-end_of_line = lf
-
-[*.{cmd,bat,ps1}]
-end_of_line = crlf
-
-# Markdown files
-[*.md]
-# Double trailing spaces can be used for BR tags, and other instances are enforced by Markdownlint
-trim_trailing_whitespace = false
-
-
-
 ######## C# header and usings ########
 [*.cs]
 
+file_header_template = unset
 dotnet_separate_import_directive_groups = true
 dotnet_sort_system_directives_first = true
 
@@ -278,7 +242,7 @@ dotnet_naming_rule.local_variables_should_be_camelcase.style = camelcase
 
 dotnet_naming_rule.local_constants_should_be_camelcase.severity = suggestion
 dotnet_naming_rule.local_constants_should_be_camelcase.symbols = local_constants
-dotnet_naming_rule.local_constants_should_be_camelcase.style = camelcase
+dotnet_naming_rule.local_constants_should_be_camelcase.style = pascalcase
 
 dotnet_naming_rule.parameters_should_be_camelcase.severity = suggestion
 dotnet_naming_rule.parameters_should_be_camelcase.symbols = parameters
@@ -324,6 +288,14 @@ dotnet_naming_rule.non_field_members_should_be_pascalcase.severity = suggestion
 dotnet_naming_rule.non_field_members_should_be_pascalcase.symbols = non_field_members
 dotnet_naming_rule.non_field_members_should_be_pascalcase.style = pascalcase
 
+dotnet_naming_rule.async_methods_should_be_pascalcase_async.severity = suggestion
+dotnet_naming_rule.async_methods_should_be_pascalcase_async.symbols = async_methods
+dotnet_naming_rule.async_methods_should_be_pascalcase_async.style = pascalcase_async
+
+dotnet_naming_rule.local_async_functions_should_be_pascalcase_async.severity = suggestion
+dotnet_naming_rule.local_async_functions_should_be_pascalcase_async.symbols = local_async_functions
+dotnet_naming_rule.local_async_functions_should_be_pascalcase_async.style = pascalcase_async
+
 # Symbol specifications
 
 dotnet_naming_symbols.interfaces.applicable_kinds = interface
@@ -366,7 +338,7 @@ dotnet_naming_symbols.non_field_members.applicable_kinds = property, event, meth
 dotnet_naming_symbols.non_field_members.applicable_accessibilities = public, internal, private, protected, protected_internal, private_protected
 dotnet_naming_symbols.non_field_members.required_modifiers = 
 
-dotnet_naming_symbols.type_parameters.applicable_kinds = namespace
+dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
 dotnet_naming_symbols.type_parameters.applicable_accessibilities = *
 dotnet_naming_symbols.type_parameters.required_modifiers = 
 
@@ -402,40 +374,78 @@ dotnet_naming_symbols.local_functions.applicable_kinds = local_function
 dotnet_naming_symbols.local_functions.applicable_accessibilities = *
 dotnet_naming_symbols.local_functions.required_modifiers = 
 
+dotnet_naming_symbols.async_methods.applicable_kinds = method
+dotnet_naming_symbols.async_methods.applicable_accessibilities = *
+dotnet_naming_symbols.async_methods.required_modifiers = async
+
+dotnet_naming_symbols.local_async_functions.applicable_kinds = local_function
+dotnet_naming_symbols.local_async_functions.applicable_accessibilities = *
+dotnet_naming_symbols.local_async_functions.required_modifiers = async
+
 # Naming styles
 
-dotnet_naming_style.pascalcase.required_prefix = 
-dotnet_naming_style.pascalcase.required_suffix = 
-dotnet_naming_style.pascalcase.word_separator = 
 dotnet_naming_style.pascalcase.capitalization = pascal_case
 
 dotnet_naming_style.ipascalcase.required_prefix = I
-dotnet_naming_style.ipascalcase.required_suffix = 
-dotnet_naming_style.ipascalcase.word_separator = 
 dotnet_naming_style.ipascalcase.capitalization = pascal_case
 
 dotnet_naming_style.tpascalcase.required_prefix = T
-dotnet_naming_style.tpascalcase.required_suffix = 
-dotnet_naming_style.tpascalcase.word_separator = 
 dotnet_naming_style.tpascalcase.capitalization = pascal_case
 
 dotnet_naming_style._camelcase.required_prefix = _
-dotnet_naming_style._camelcase.required_suffix = 
-dotnet_naming_style._camelcase.word_separator = 
 dotnet_naming_style._camelcase.capitalization = camel_case
 
-dotnet_naming_style.camelcase.required_prefix = 
-dotnet_naming_style.camelcase.required_suffix = 
-dotnet_naming_style.camelcase.word_separator = 
 dotnet_naming_style.camelcase.capitalization = camel_case
 
 dotnet_naming_style.s_camelcase.required_prefix = s_
-dotnet_naming_style.s_camelcase.required_suffix = 
-dotnet_naming_style.s_camelcase.word_separator = 
 dotnet_naming_style.s_camelcase.capitalization = camel_case
+
+dotnet_naming_style.pascalcase_async.required_suffix = Async
+dotnet_naming_style.pascalcase_async.capitalization = pascal_case
 
 
 #### Analyzers ####
 
 # Suppression preferences (IDE0079)
 dotnet_remove_unnecessary_suppression_exclusions = none
+
+
+
+######## Extra Files ########
+
+# Generated files
+#[*{.generated.cs,.g.cs}]
+#generated_code = true
+
+# C++ Files
+[*.{cpp,h,in}]
+curly_bracket_next_line = true
+indent_brace_style = Allman
+
+# Xml project files
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
+indent_size = 2
+
+# Xml build files
+[*.builds]
+indent_size = 2
+
+# Xml files
+[*.{xml,stylecop,resx,ruleset}]
+indent_size = 2
+
+# Xml config files
+[*.{props,targets,config,nuspec}]
+indent_size = 2
+
+# Shell scripts
+[*.{sh,bash}]
+end_of_line = lf
+
+[*.{cmd,bat,ps1}]
+end_of_line = crlf
+
+# Markdown files
+[*.md]
+# Double trailing spaces can be used for BR tags, and other instances are enforced by Markdownlint
+trim_trailing_whitespace = false
