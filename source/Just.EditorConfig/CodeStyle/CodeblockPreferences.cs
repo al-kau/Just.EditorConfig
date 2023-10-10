@@ -1,4 +1,8 @@
 ﻿// csharp_style_namespace_declarations = block_scoped:silent
+// IDE0160: Use block-scoped namespace, IDE0161: Use file-scoped namespace
+// dotnet_diagnostic.IDE0160.severity = none
+// dotnet_diagnostic.IDE0161.severity = none
+
 /*
 // csharp_style_namespace_declarations = block_scoped
 using System;
@@ -24,6 +28,8 @@ namespace Just.EditorConfig.CodeStyle
     internal class CodeblockPreferences
     {
         // csharp_prefer_simple_using_statement = true:suggestion
+        // IDE0063: Use simple using statement
+        // dotnet_diagnostic.IDE0063.severity = none
         void csharp_prefer_simple_using_statement()
         {
             /*
@@ -43,6 +49,8 @@ namespace Just.EditorConfig.CodeStyle
         }
 
         // csharp_prefer_braces = true:silent
+        // IDE0011: Add braces
+        // dotnet_diagnostic.IDE0011.severity = none
         void csharp_prefer_braces(bool test)
         {
             /*
@@ -69,6 +77,8 @@ namespace Just.EditorConfig.CodeStyle
         // 'csharp_style_namespace_declarations' option at the top of the file
 
         // csharp_style_prefer_method_group_conversion = true:silent
+        // IDE0200: Remove unnecessary lambda expression
+        // dotnet_diagnostic.IDE0200.severity = none
         void csharp_style_prefer_method_group_conversion()
         {
             /*
@@ -85,6 +95,9 @@ namespace Just.EditorConfig.CodeStyle
 
 
         // csharp_style_prefer_top_level_statements = true:silent
+        // IDE0210: Convert to top-level statements, IDE0211: Convert to 'Program.Main' style program
+        // dotnet_diagnostic.IDE0210.severity = none
+        // dotnet_diagnostic.IDE0211.severity = none
         /*
         // csharp_style_prefer_top_level_statements = true
         Console.WriteLine("Hello, World!");
@@ -98,5 +111,8 @@ namespace Just.EditorConfig.CodeStyle
             }
         }
         */
+
+        // csharp_style_prefer_primary_constructors
+        // ToDo: sample
     }
 }

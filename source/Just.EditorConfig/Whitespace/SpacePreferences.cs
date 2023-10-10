@@ -154,6 +154,8 @@
 
             // csharp_space_between_parentheses = type_casts
             int y = ( int )x;
+
+            // csharp_space_between_parentheses = false
             *******************************************/
 
             for (int i = 0; i < 10; i++) { }
@@ -274,10 +276,10 @@
         {
             /*********************************************
             // csharp_space_before_comma = true
-            int[] x = new int[] { 1 , 2 , 3 , 4 , 5 };
+            int[] x = new int[] { 1 ,2 ,3 ,4 ,5 };
 
             // csharp_space_before_comma = false
-            int[] x = new int[] { 1, 2, 3, 4, 5 };
+            int[] x = new int[] { 1,2,3,4,5 };
             *********************************************/
 
             int[] x = new int[] { 1, 2, 3, 4, 5 };

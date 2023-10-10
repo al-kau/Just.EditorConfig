@@ -1,4 +1,6 @@
 ﻿// csharp_using_directive_placement = outside_namespace:silent
+// IDE0065: 'using' directive placement
+// dotnet_diagnostic.IDE0065.severity = none
 
 /*
 // csharp_using_directive_placement = outside_namespace

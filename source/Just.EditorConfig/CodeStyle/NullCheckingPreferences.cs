@@ -3,6 +3,8 @@
     internal class NullCheckingPreferences
     {
         // csharp_style_conditional_delegate_call = true:suggestion
+        // IDE1005: Use conditional delegate call
+        // dotnet_diagnostic.IDE1005.severity = none
         void csharp_style_conditional_delegate_call(Action<int> func, int args)
         {
             /*

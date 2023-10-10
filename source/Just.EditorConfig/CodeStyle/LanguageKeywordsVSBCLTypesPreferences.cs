@@ -2,7 +2,10 @@
 {
     internal class LanguageKeywordsVSBCLTypesPreferences
     {
-        //dotnet_style_predefined_type_for_locals_parameters_members = true:silent
+        // dotnet_style_predefined_type_for_locals_parameters_members = true:silent
+        // IDE0049: Use language keywords instead of framework type names for type references
+        // dotnet_diagnostic.IDE0049.severity = none
+
         /*
         // dotnet_style_predefined_type_for_locals_parameters_members = true
         private int _member;
@@ -15,7 +18,9 @@
         private Int32 _member2;
 
 
-        //dotnet_style_predefined_type_for_member_access = true:silent
+        // dotnet_style_predefined_type_for_member_access = true:silent
+        // IDE0049: Use language keywords instead of framework type names for type references
+        // dotnet_diagnostic.IDE0049.severity = none
         void dotnet_style_predefined_type_for_member_access()
         {
             /*

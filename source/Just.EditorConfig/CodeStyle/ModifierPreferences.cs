@@ -2,8 +2,9 @@
 {
     internal class ModifierPreferences
     {
-
-        //csharp_prefer_static_local_function = true:warning
+        // csharp_prefer_static_local_function = true:warning
+        // IDE0062: Make local function static
+        // dotnet_diagnostic.IDE0062.severity = none
         void csharp_prefer_static_local_function()
         {
             /*
@@ -42,7 +43,9 @@
             }
         }
 
-        //csharp_style_prefer_readonly_struct = true:suggestion
+        // csharp_style_prefer_readonly_struct = true:suggestion
+        // IDE0250: Struct can be made 'readonly'
+        // dotnet_diagnostic.IDE0250.severity = none
         /*
         // csharp_style_prefer_readonly_struct = true
         readonly struct MyPoint
@@ -70,7 +73,9 @@
             public int X, Y;
         }
 
-        //csharp_style_prefer_readonly_struct_member = true:suggestion
+        // csharp_style_prefer_readonly_struct_member = true:suggestion
+        // IDE0251: Member can be made 'readonly'
+        // dotnet_diagnostic.IDE0251.severity = none
         /*
         //csharp_style_prefer_readonly_struct_member = true
         static int A1(int n)
@@ -90,7 +95,9 @@
         }
     }
 
-    //csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:silent
+    // csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:silent
+    // IDE0036: Order modifiers
+    // dotnet_diagnostic.IDE0036.severity = none
     /*
     // csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async
     class MyClass
@@ -108,9 +115,9 @@
         }
     }
 
-
-
-    //dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+    // dotnet_style_require_accessibility_modifiers = for_non_interface_members:silent
+    // IDE0040: Add accessibility modifiers
+    // dotnet_diagnostic.IDE0040.severity = none
     /*
     // dotnet_style_require_accessibility_modifiers = always
     // dotnet_style_require_accessibility_modifiers = for_non_interface_members

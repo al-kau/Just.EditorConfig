@@ -2,7 +2,9 @@
 {
     internal class ParameterPreferences
     {
-        //dotnet_code_quality_unused_parameters = all:suggestion
+        // dotnet_code_quality_unused_parameters = all:suggestion
+        // IDE0060: Remove unused parameter
+        // dotnet_diagnostic.IDE0060.severity = none
         /*
         // dotnet_code_quality_unused_parameters = all
         public int GetNum1(int unusedParam) { return 1; }

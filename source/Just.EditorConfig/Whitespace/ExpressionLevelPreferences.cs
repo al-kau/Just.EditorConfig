@@ -11,7 +11,7 @@
             //    && b)
             //{ }
             //
-            // dotnet_style_operator_placement_when_wrapping = beginning_of_line
+            // dotnet_style_operator_placement_when_wrapping = end_of_line
             //if (a &&
             //    b)
             //{ }
