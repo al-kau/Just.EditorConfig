@@ -5,7 +5,7 @@ using System.IO;
 // Code with violations
 using System.Text.Encodings;
 
-namespace Just.EditorConfig.Analizers
+namespace Just.EditorConfig.Analyzers
 {
     enum E
     {
