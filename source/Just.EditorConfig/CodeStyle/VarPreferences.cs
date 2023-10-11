@@ -2,7 +2,11 @@
 {
     internal class VarPreferences
     {
-        //csharp_style_var_for_built_in_types = false:silent
+        // csharp_style_var_for_built_in_types = false:silent
+        // IDE0007: Use 'var' instead of explicit type
+        // IDE0008: Use explicit type instead of 'var'
+        // dotnet_diagnostic.IDE0007.severity = none
+        // dotnet_diagnostic.IDE0008.severity = none
         void csharp_style_var_for_built_in_types()
         {
             /*
@@ -18,7 +22,11 @@
             int x2 = 5;
         }
 
-        //csharp_style_var_when_type_is_apparent = false:silent
+        // csharp_style_var_when_type_is_apparent = false:silent
+        // IDE0007: Use 'var' instead of explicit type
+        // IDE0008: Use explicit type instead of 'var'
+        // dotnet_diagnostic.IDE0007.severity = none
+        // dotnet_diagnostic.IDE0008.severity = none
         void csharp_style_var_when_type_is_apparent()
         {
             /*
@@ -34,7 +42,11 @@
             Object obj2 = new Object();
         }
 
-        //csharp_style_var_elsewhere = false:silent
+        // csharp_style_var_elsewhere = false:silent
+        // IDE0007: Use 'var' instead of explicit type
+        // IDE0008: Use explicit type instead of 'var'
+        // dotnet_diagnostic.IDE0007.severity = none
+        // dotnet_diagnostic.IDE0008.severity = none
         void csharp_style_var_elsewhere()
         {
             /*

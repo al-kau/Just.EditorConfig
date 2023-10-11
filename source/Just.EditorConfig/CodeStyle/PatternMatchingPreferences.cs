@@ -4,7 +4,9 @@ namespace Just.EditorConfig.CodeStyle
 {
     internal class PatternMatchingPreferences
     {
-        //csharp_style_prefer_switch_expression = true:suggestion
+        // csharp_style_prefer_switch_expression = true:suggestion
+        // IDE0066: Use switch expression
+        // dotnet_diagnostic.IDE0066.severity = none
         int csharp_style_prefer_switch_expression(int x)
         {
             /*
@@ -47,7 +49,9 @@ namespace Just.EditorConfig.CodeStyle
         }
 
 
-        //csharp_style_prefer_pattern_matching = true:silent
+        // csharp_style_prefer_pattern_matching = true:silent
+        // IDE0078: Use pattern matching
+        // dotnet_diagnostic.IDE0078.severity = none
         void csharp_style_prefer_pattern_matching(int i, object o)
         {
             /*
@@ -70,7 +74,11 @@ namespace Just.EditorConfig.CodeStyle
         }
 
 
-        //csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+        // csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
+        // IDE0020: Use pattern matching to avoid 'is' check followed by a cast (with variable)
+        // IDE0038: Use pattern matching to avoid 'is' check followed by a cast (without variable)
+        // dotnet_diagnostic.IDE0020.severity = none
+        // dotnet_diagnostic.IDE0038.severity = none
         void csharp_style_pattern_matching_over_is_with_cast_check(object o)
         {
             /*
@@ -87,7 +95,11 @@ namespace Just.EditorConfig.CodeStyle
         }
 
 
-        //csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+        // csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
+        // IDE0019: Use pattern matching to avoid 'as' followed by a 'null' check
+        // IDE0260: Use pattern matching
+        // dotnet_diagnostic.IDE0019.severity = none
+        // dotnet_diagnostic.IDE0260.severity = none
         void csharp_style_pattern_matching_over_as_with_null_check(object o)
         {
             /*
@@ -106,7 +118,9 @@ namespace Just.EditorConfig.CodeStyle
         }
 
 
-        //csharp_style_prefer_not_pattern = true:suggestion
+        // csharp_style_prefer_not_pattern = true:suggestion
+        // IDE0083: Use pattern matching ('not' operator)
+        // dotnet_diagnostic.IDE0083.severity = none
         void csharp_style_prefer_not_pattern(object o)
         {
             /*
@@ -125,7 +139,9 @@ namespace Just.EditorConfig.CodeStyle
         }
 
 
-        //csharp_style_prefer_extended_property_pattern = true:suggestion
+        // csharp_style_prefer_extended_property_pattern = true:suggestion
+        // IDE0170: Simplify property pattern
+        // dotnet_diagnostic.IDE0170.severity = none
         void csharp_style_prefer_extended_property_pattern()
         {
             /*

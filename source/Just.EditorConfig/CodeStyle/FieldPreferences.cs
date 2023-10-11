@@ -3,6 +3,8 @@
     internal class FieldPreferences
     {
         // dotnet_style_readonly_field = true:warning
+        // IDE0044: Add readonly modifier
+        // dotnet_diagnostic.IDE0044.severity = none
         /*
         // dotnet_style_readonly_field = true
         class MyClass

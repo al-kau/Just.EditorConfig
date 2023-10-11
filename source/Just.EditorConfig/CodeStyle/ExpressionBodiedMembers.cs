@@ -3,6 +3,8 @@
     internal class ExpressionBodiedMembers
     {
         // csharp_style_expression_bodied_methods = false:silent
+        // IDE0022: Use expression body for methods
+        // dotnet_diagnostic.IDE0022.severity = none
         /*
         // csharp_style_expression_bodied_methods = true 
         // values: [when_on_single_line]
@@ -18,6 +20,8 @@
 
 
         // csharp_style_expression_bodied_constructors = false:silent
+        // IDE0021: Use expression body for constructors
+        // dotnet_diagnostic.IDE0021.severity = none
         /*
         // csharp_style_expression_bodied_constructors = true 
         // values: [when_on_single_line]
@@ -31,6 +35,9 @@
 
 
         // csharp_style_expression_bodied_operators = false:silent
+        // IDE0023: Use expression body for conversion operators, IDE0024: Use expression body for operators
+        // dotnet_diagnostic.IDE0023.severity = none
+        // dotnet_diagnostic.IDE0024.severity = none
         /*
         // csharp_style_expression_bodied_operators = true
         // values: [when_on_single_line]
@@ -50,6 +57,8 @@
 
 
         // csharp_style_expression_bodied_properties = true:silent
+        // IDE0025: Use expression body for properties
+        // dotnet_diagnostic.IDE0025.severity = none
         /*
         // csharp_style_expression_bodied_properties = true
         // values: [when_on_single_line]
@@ -64,6 +73,8 @@
 
 
         // csharp_style_expression_bodied_indexers = true:silent
+        // IDE0026: Use expression body for indexers
+        // dotnet_diagnostic.IDE0026.severity = none
         /*
         // csharp_style_expression_bodied_indexers = true
         // values: [when_on_single_line]
@@ -78,6 +89,8 @@
 
 
         // csharp_style_expression_bodied_accessors = true:silent
+        // IDE0027: Use expression body for accessors
+        // dotnet_diagnostic.IDE0027.severity = none
         /*
         // csharp_style_expression_bodied_accessors = true
         // values: [when_on_single_line]
@@ -92,6 +105,8 @@
 
 
         // csharp_style_expression_bodied_lambdas = true:suggestion
+        // IDE0053: Use expression body for lambdas
+        // dotnet_diagnostic.IDE0053.severity = none
         void csharp_style_expression_bodied_lambdas(int x)
         {
             /*
@@ -109,6 +124,8 @@
 
 
         // csharp_style_expression_bodied_local_functions = false:silent
+        // IDE0061: Use expression body for local functions
+        // dotnet_diagnostic.IDE0061.severity = none
         void csharp_style_expression_bodied_local_functions()
         {
             /*

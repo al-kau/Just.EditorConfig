@@ -4,7 +4,9 @@ namespace Just.EditorConfig.BadExample
 {
     internal class ExpressionLevelPreferences
     {
-        //dotnet_style_namespace_match_folder = true:suggestion
+        // dotnet_style_namespace_match_folder = true:suggestion
+        // IDE0130: Namespace does not match folder structure
+        // dotnet_diagnostic.IDE0130.severity = none
     }
 }
 
@@ -13,7 +15,9 @@ namespace Just.EditorConfig.CodeStyle
     internal class ExpressionLevelPreferences
     {
 
-        //csharp_style_throw_expression = true:suggestion
+        // csharp_style_throw_expression = true:suggestion
+        // IDE0016: Use throw expression
+        // dotnet_diagnostic.IDE0016.severity = none
         void csharp_style_throw_expression(int? s)
         {
             /*
@@ -33,7 +37,9 @@ namespace Just.EditorConfig.CodeStyle
             this._s = s;
         }
 
-        //csharp_style_prefer_null_check_over_type_check = true:suggestion
+        // csharp_style_prefer_null_check_over_type_check = true:suggestion
+        // IDE0150: Prefer 'null' check over type check
+        // dotnet_diagnostic.IDE0150.severity = none
         void csharp_style_prefer_null_check_over_type_check(object? numbers)
         {
             /*
@@ -66,7 +72,9 @@ namespace Just.EditorConfig.CodeStyle
                 return;
         }
 
-        //csharp_prefer_simple_default_expression = true:suggestion
+        // csharp_prefer_simple_default_expression = true:suggestion
+        // IDE0034: Simplify 'default' expression
+        // dotnet_diagnostic.IDE0034.severity = none
         void csharp_prefer_simple_default_expression()
         {
             /*
@@ -81,7 +89,9 @@ namespace Just.EditorConfig.CodeStyle
             static void DoWork2(CancellationToken cancellationToken = default(CancellationToken)) { }
         }
 
-        //csharp_style_prefer_local_over_anonymous_function = true:suggestion
+        // csharp_style_prefer_local_over_anonymous_function = true:suggestion
+        // IDE0039: Use local function instead of lambda
+        // dotnet_diagnostic.IDE0039.severity = none
         void csharp_style_prefer_local_over_anonymous_function()
         {
             /*
@@ -110,13 +120,16 @@ namespace Just.EditorConfig.CodeStyle
             };
         }
 
-        //csharp_style_pattern_local_over_anonymous_function = true:suggestion
+        // csharp_style_pattern_local_over_anonymous_function = true:suggestion
+        // IDE????
         void csharp_style_pattern_local_over_anonymous_function()
         {
             // unknown
         }
 
-        //csharp_style_prefer_index_operator = true:suggestion
+        // csharp_style_prefer_index_operator = true:suggestion
+        // IDE0056: Use index operator
+        // dotnet_diagnostic.IDE0056.severity = none
         void csharp_style_prefer_index_operator()
         {
             /*
@@ -136,7 +149,9 @@ namespace Just.EditorConfig.CodeStyle
             _ = names2[names2.Length - 1];
         }
 
-        //csharp_style_prefer_range_operator = true:suggestion
+        // csharp_style_prefer_range_operator = true:suggestion
+        // IDE0057: Use range operator
+        // dotnet_diagnostic.IDE0057.severity = none
         void csharp_style_prefer_range_operator()
         {
             /*
@@ -156,7 +171,9 @@ namespace Just.EditorConfig.CodeStyle
             _ = sentence2.Substring(0, sentence2.Length - 4);
         }
 
-        //csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+        // csharp_style_implicit_object_creation_when_type_is_apparent = true:suggestion
+        // IDE0090: Simplify 'new' expression
+        // dotnet_diagnostic.IDE0090.severity = none
         void csharp_style_implicit_object_creation_when_type_is_apparent()
         {
             /*
@@ -177,7 +194,9 @@ namespace Just.EditorConfig.CodeStyle
             C c12 = new C() { Field = 0 };
         }
 
-        //csharp_style_prefer_tuple_swap = true:suggestion
+        // csharp_style_prefer_tuple_swap = true:suggestion
+        // IDE0180: Use tuple to swap values
+        // dotnet_diagnostic.IDE0180.severity = none
         void csharp_style_prefer_tuple_swap()
         {
             /*
@@ -200,7 +219,9 @@ namespace Just.EditorConfig.CodeStyle
             (numbers[1], numbers[0]) = (numbers[0], numbers[1]);
         }
 
-        //csharp_style_prefer_utf8_string_literals = true:suggestion
+        // csharp_style_prefer_utf8_string_literals = true:suggestion
+        // IDE0230: Use UTF-8 string literal
+        // dotnet_diagnostic.IDE0230.severity = none
         void csharp_style_prefer_utf8_string_literals()
         {
             /*
@@ -215,7 +236,9 @@ namespace Just.EditorConfig.CodeStyle
             _ = new byte[] { 65, 66, 67 };
         }
 
-        //csharp_style_inlined_variable_declaration = true:suggestion
+        // csharp_style_inlined_variable_declaration = true:suggestion
+        // IDE0018: Inline variable declaration
+        // dotnet_diagnostic.IDE0018.severity = none
         void csharp_style_inlined_variable_declaration(string value)
         {
             /*
@@ -233,7 +256,9 @@ namespace Just.EditorConfig.CodeStyle
             if (int.TryParse(value, out i2)) { i2++; }
         }
 
-        //csharp_style_deconstructed_variable_declaration = true:suggestion
+        // csharp_style_deconstructed_variable_declaration = true:suggestion
+        // IDE0042: Deconstruct variable declaration
+        // dotnet_diagnostic.IDE0042.severity = none
         void csharp_style_deconstructed_variable_declaration()
         {
             /*
@@ -275,7 +300,9 @@ namespace Just.EditorConfig.CodeStyle
             Console.WriteLine($"{point.x} {point.y}");
         }
 
-        //csharp_style_unused_value_assignment_preference = discard_variable:suggestion
+        // csharp_style_unused_value_assignment_preference = discard_variable:suggestion
+        // IDE0059: Remove unnecessary value assignment
+        // dotnet_diagnostic.IDE0059.severity = none
         void csharp_style_unused_value_assignment_preference(Dictionary<string, int> wordCount, string searchWord)
         {
             /*
@@ -298,7 +325,9 @@ namespace Just.EditorConfig.CodeStyle
             var unused = wordCount.TryGetValue(searchWord, out var count2);
         }
 
-        //csharp_style_unused_value_expression_statement_preference = discard_variable:silent
+        // csharp_style_unused_value_expression_statement_preference = discard_variable:silent
+        // IDE0058: Remove unnecessary expression value
+        // dotnet_diagnostic.IDE0058.severity = none
         void csharp_style_unused_value_expression_statement_preference()
         {
             /*
@@ -317,7 +346,11 @@ namespace Just.EditorConfig.CodeStyle
             var unused = Convert.ToInt32("35");
         }
 
-        //dotnet_style_coalesce_expression = true:suggestion
+        // dotnet_style_coalesce_expression = true:suggestion
+        // IDE0029: Null check can be simplified (ternary conditional check),
+        // IDE0030: Null check can be simplified (nullable ternary conditional check), IDE0270: Null check can be simplified (if null check)
+        // dotnet_diagnostic.IDE0029.severity = none
+        // dotnet_diagnostic.IDE0030.severity = none
         void dotnet_style_coalesce_expression(object? arg)
         {
             /*
@@ -337,7 +370,9 @@ namespace Just.EditorConfig.CodeStyle
             var item2 = arg as C ?? throw new System.InvalidOperationException();
         }
 
-        //dotnet_style_null_propagation = true:suggestion
+        // dotnet_style_null_propagation = true:suggestion
+        // IDE0031: Use null propagation
+        // dotnet_diagnostic.IDE0031.severity = none
         void dotnet_style_null_propagation(int? o)
         {
             /*
@@ -357,7 +392,9 @@ namespace Just.EditorConfig.CodeStyle
             var v3 = o != null ? o.ToString() : null;
         }
 
-        //dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+        // dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
+        // IDE0041: Use 'is null' check
+        // dotnet_diagnostic.IDE0041.severity = none
         void dotnet_style_prefer_is_null_check_over_reference_equality_method(object? value)
         {
             /*
@@ -387,7 +424,9 @@ namespace Just.EditorConfig.CodeStyle
                 return;
         }
 
-        //dotnet_style_prefer_auto_properties = true:suggestion
+        // dotnet_style_prefer_auto_properties = true:suggestion
+        // IDE0032: Use auto-implemented property
+        // dotnet_diagnostic.IDE0032.severity = none
         /*
         // dotnet_style_prefer_auto_properties = true
         public int Age { get; }
@@ -414,7 +453,9 @@ namespace Just.EditorConfig.CodeStyle
             }
         }
 
-        //dotnet_style_object_initializer = true:suggestion
+        // dotnet_style_object_initializer = true:suggestion
+        // IDE0017: Use object initializers
+        // dotnet_diagnostic.IDE0017.severity = none
         void dotnet_style_object_initializer()
         {
             /*
@@ -434,7 +475,9 @@ namespace Just.EditorConfig.CodeStyle
             c1.Field = 21;
         }
 
-        //dotnet_style_collection_initializer = true:suggestion
+        // dotnet_style_collection_initializer = true:suggestion
+        // IDE0028: Use collection initializers
+        // dotnet_diagnostic.IDE0028.severity = none
         void dotnet_style_collection_initializer()
         {
             /*
@@ -458,7 +501,9 @@ namespace Just.EditorConfig.CodeStyle
             list2.Add(3);
         }
 
-        //dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+        // dotnet_style_prefer_simplified_boolean_expressions = true:suggestion
+        // IDE0075: Simplify conditional expression
+        // dotnet_diagnostic.IDE0075.severity = none
         void dotnet_style_prefer_simplified_boolean_expressions()
         {
             /*
@@ -483,7 +528,9 @@ namespace Just.EditorConfig.CodeStyle
             var result22 = M1() ? true : M2();
         }
 
-        //dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
+        // dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
+        // IDE0045: Use conditional expression for assignment
+        // dotnet_diagnostic.IDE0045.severity = none
         void dotnet_style_prefer_conditional_expression_over_assignment(bool expr)
         {
             /*
@@ -517,7 +564,9 @@ namespace Just.EditorConfig.CodeStyle
             }
         }
 
-        //dotnet_style_prefer_conditional_expression_over_return = true:suggestion
+        // dotnet_style_prefer_conditional_expression_over_return = true:suggestion
+        // IDE0046: Use conditional expression for return
+        // dotnet_diagnostic.IDE0046.severity = none
         string dotnet_style_prefer_conditional_expression_over_return(bool expr)
         {
             /*
@@ -549,8 +598,9 @@ namespace Just.EditorConfig.CodeStyle
             }
         }
 
-        //dotnet_style_explicit_tuple_names = true:suggestion
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0042:Deconstruct variable declaration", Justification = "<Pending>")]
+        // dotnet_style_explicit_tuple_names = true:suggestion
+        // IDE0033: Use explicitly provided tuple name
+        // dotnet_diagnostic.IDE0033.severity = none
         void dotnet_style_explicit_tuple_names()
         {
             /*
@@ -577,7 +627,9 @@ namespace Just.EditorConfig.CodeStyle
             var name1 = customer1.Item1;
         }
 
-        //dotnet_style_prefer_inferred_tuple_names = true:suggestion
+        // dotnet_style_prefer_inferred_tuple_names = true:suggestion
+        // IDE0037: Use inferred member names
+        // dotnet_diagnostic.IDE0037.severity = none
         void dotnet_style_prefer_inferred_tuple_names(int age, string name)
         {
             /*
@@ -595,7 +647,9 @@ namespace Just.EditorConfig.CodeStyle
             var tuple1 = (age: age, name: name);
         }
 
-        //dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
+        // dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
+        // IDE0037: Use inferred member names
+        // dotnet_diagnostic.IDE0037.severity = none
         void dotnet_style_prefer_inferred_anonymous_type_member_names(int age, string name)
         {
             /*
@@ -613,7 +667,11 @@ namespace Just.EditorConfig.CodeStyle
             var anon1 = new { age = age, name = name };
         }
 
-        //dotnet_style_prefer_compound_assignment = true:suggestion
+        // dotnet_style_prefer_compound_assignment = true:suggestion
+        // IDE0054: Use compound assignment
+        // IDE0074: Use coalesce compound assignment
+        // dotnet_diagnostic.IDE0054.severity = none
+        // dotnet_diagnostic.IDE0074.severity = none
         void dotnet_style_prefer_compound_assignment(int x)
         {
             /*
@@ -631,7 +689,9 @@ namespace Just.EditorConfig.CodeStyle
             x = x + 5;
         }
 
-        //dotnet_style_prefer_simplified_interpolation = true:suggestion
+        // dotnet_style_prefer_simplified_interpolation = true:suggestion
+        // IDE0071: Simplify interpolation
+        // dotnet_diagnostic.IDE0071.severity = none
         void dotnet_style_prefer_simplified_interpolation(int someValue)
         {
             /*
@@ -649,9 +709,26 @@ namespace Just.EditorConfig.CodeStyle
             var str1 = $"prefix {someValue.ToString()} suffix";
         }
 
-        //dotnet_style_namespace_match_folder = true:suggestion
+        // dotnet_style_namespace_match_folder = true:suggestion
+        // IDE0130: Namespace does not match folder structure
+        // dotnet_diagnostic.IDE0130.severity = none
         // 'csharp_style_namespace_declarations' option at the top of the file
 
+        // dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed:suggestion
+        // IDE0220: Add explicit cast in foreach loop
+        // dotnet_diagnostic.IDE0220.severity = none
+        void dotnet_style_prefer_foreach_explicit_cast_in_source()
+        {
+            //always, when_strongly_typed
+
+            // Code with violations.
+            var list0 = new List<object>();
+            foreach (string item in list0) { }
+
+            // Fixed code.
+            var list1 = new List<object>();
+            foreach (string item in list1.Cast<string>()) { }
+        }
 
         private int? _s;
     }

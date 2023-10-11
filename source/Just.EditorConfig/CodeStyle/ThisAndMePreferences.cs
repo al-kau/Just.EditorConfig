@@ -2,7 +2,11 @@
 {
     internal class ThisAndMePreferences
     {
-        //dotnet_style_qualification_for_field = false:silent
+        // dotnet_style_qualification_for_field = false:silent
+        // IDE0003: Remove 'this' or 'Me' qualification
+        // IDE0009: Add 'this' or 'Me' qualification
+        // dotnet_diagnostic.IDE0003.severity = none
+        // dotnet_diagnostic.IDE0009.severity = none
         void dotnet_style_qualification_for_field()
         {
             /*
@@ -17,7 +21,11 @@
             _capacity = 0;
         }
 
-        //dotnet_style_qualification_for_property = false:silent
+        // dotnet_style_qualification_for_property = false:silent
+        // IDE0003: Remove 'this' or 'Me' qualification
+        // IDE0009: Add 'this' or 'Me' qualification
+        // dotnet_diagnostic.IDE0003.severity = none
+        // dotnet_diagnostic.IDE0009.severity = none
         void dotnet_style_qualification_for_property()
         {
             /*
@@ -32,7 +40,11 @@
             ID = 0;
         }
 
-        //dotnet_style_qualification_for_method = false:silent
+        // dotnet_style_qualification_for_method = false:silent
+        // IDE0003: Remove 'this' or 'Me' qualification
+        // IDE0009: Add 'this' or 'Me' qualification
+        // dotnet_diagnostic.IDE0003.severity = none
+        // dotnet_diagnostic.IDE0009.severity = none
         void dotnet_style_qualification_for_method()
         {
             /*
@@ -47,7 +59,11 @@
             Display();
         }
 
-        //dotnet_style_qualification_for_event = false:silent
+        // dotnet_style_qualification_for_event = false:silent
+        // IDE0003: Remove 'this' or 'Me' qualification
+        // IDE0009: Add 'this' or 'Me' qualification
+        // dotnet_diagnostic.IDE0003.severity = none
+        // dotnet_diagnostic.IDE0009.severity = none
         void dotnet_style_qualification_for_event()
         {
             /*
@@ -64,7 +80,6 @@
             // dotnet_style_qualification_for_event = false
             Elapsed += Handler;
         }
-
 
         private int _capacity = 0;
         private int ID { get; set; }
