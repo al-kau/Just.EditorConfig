@@ -89,9 +89,13 @@ namespace Just.EditorConfig.CodeStyle
             if (o is int) { var i = (int)o; ... }
             */
 
-            if (o is int i1) { }
+            if (o is int i1)
+            { }
 
-            if (o is int) { var i2 = (int)o; }
+            if (o is int)
+            {
+                var i2 = (int)o;
+            }
         }
 
 
@@ -111,10 +115,12 @@ namespace Just.EditorConfig.CodeStyle
             if (s != null) { ...}
             */
 
-            if (o is string s1) { }
+            if (o is string s1)
+            { }
 
             var s2 = o as string;
-            if (s2 != null) { }
+            if (s2 != null)
+            { }
         }
 
 
@@ -154,11 +160,15 @@ namespace Just.EditorConfig.CodeStyle
                 segment is { Start.Y: 0 } or { End.Y: 0 };
             */
 
-            static bool IsEndOnXAxis1(Segment segment) =>
-                segment is { Start: { Y: 0 } } or { End: { Y: 0 } };
+            static bool IsEndOnXAxis1(Segment segment)
+            {
+                return segment is { Start: { Y: 0 } } or { End: { Y: 0 } };
+            }
 
-            static bool IsEndOnXAxis2(Segment segment) =>
-                segment is { Start.Y: 0 } or { End.Y: 0 };
+            static bool IsEndOnXAxis2(Segment segment)
+            {
+                return segment is { Start.Y: 0 } or { End.Y: 0 };
+            }
         }
 
 

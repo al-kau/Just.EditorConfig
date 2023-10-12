@@ -15,9 +15,11 @@
             if (func != null) { func(args); }
             */
 
-
             func?.Invoke(args);
-            if (func != null) { func(args); }
+            if (func != null)
+            {
+                func(args);
+            }
         }
     }
 }
