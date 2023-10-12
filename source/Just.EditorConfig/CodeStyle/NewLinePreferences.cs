@@ -22,7 +22,12 @@ namespace Just.EditorConfig.CodeStyle
             }
             */
 
-            if (a > b) return;
+            if (a > b) { return; }
+
+            if (a > b)
+            {
+                return;
+            }
         }
 
         // csharp_style_allow_blank_lines_between_consecutive_braces_experimental = true:silent
@@ -78,9 +83,9 @@ namespace Just.EditorConfig.CodeStyle
             var t2 = (condition) ? int.MaxValue : int.MinValue;
             */
 
-            var t1 = (condition) ?
-                int.MaxValue:
-                int.MinValue;
+            var t1 = (condition)
+                ? int.MaxValue
+                : int.MinValue;
 
             var t2 = (condition) ? int.MaxValue : int.MinValue;
         }
@@ -207,7 +212,7 @@ namespace Just.EditorConfig.CodeStyle
     }
     */
 
-    class A : B
+    internal class A : B
     {
         public A()
            : base()
@@ -220,6 +225,6 @@ namespace Just.EditorConfig.CodeStyle
         { }
     }
 
-    class B
+    internal class B
     { }
 }

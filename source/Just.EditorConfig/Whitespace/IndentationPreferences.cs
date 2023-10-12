@@ -107,15 +107,15 @@
             switch (n)
             {
                 case 0:
-                    {
-                        Console.WriteLine("Hello");
-                        break;
-                    }
+                {
+                    Console.WriteLine("Hello");
+                    break;
+                }
                 default:
-                    {
-                        Console.WriteLine("Hi");
-                        break;
-                    }
+                {
+                    Console.WriteLine("Hi");
+                    break;
+                }
             }
         }
 

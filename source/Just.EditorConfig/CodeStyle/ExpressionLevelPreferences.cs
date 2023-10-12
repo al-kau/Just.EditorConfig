@@ -1,4 +1,6 @@
-﻿using Just.EditorConfig.Whitespace;
+﻿using System.Globalization;
+
+using Just.EditorConfig.Whitespace;
 
 namespace Just.EditorConfig.BadExample
 {
@@ -60,16 +62,19 @@ namespace Just.EditorConfig.CodeStyle
 
 
             if (numbers is int)
-                return;
+            { }
 
             if (numbers is not int)
-                return;
+            { }
 
             if (numbers is null)
-                return;
+            { }
 
             if (numbers is not null)
-                return;
+            { }
+
+            if (numbers is not IEnumerable<int>)
+            { }
         }
 
         // csharp_prefer_simple_default_expression = true:suggestion
@@ -254,6 +259,9 @@ namespace Just.EditorConfig.CodeStyle
 
             int i2;
             if (int.TryParse(value, out i2)) { i2++; }
+
+            i1++;
+            i2++;
         }
 
         // csharp_style_deconstructed_variable_declaration = true:suggestion
@@ -341,20 +349,38 @@ namespace Just.EditorConfig.CodeStyle
             System.Convert.ToInt32("35");
             */
 
-            System.Convert.ToInt32("35");
-            _ = System.Convert.ToInt32("35");
-            var unused = Convert.ToInt32("35");
+            System.Convert.ToInt32("35", CultureInfo.InvariantCulture);
+            _ = System.Convert.ToInt32("35", CultureInfo.InvariantCulture);
+            var unused = Convert.ToInt32("35", CultureInfo.InvariantCulture);
         }
 
         // dotnet_style_coalesce_expression = true:suggestion
         // IDE0029: Null check can be simplified (ternary conditional check),
-        // IDE0030: Null check can be simplified (nullable ternary conditional check), IDE0270: Null check can be simplified (if null check)
+        // IDE0030: Null check can be simplified (nullable ternary conditional check)
+        // IDE0270: Null check can be simplified (if null check)
         // dotnet_diagnostic.IDE0029.severity = none
         // dotnet_diagnostic.IDE0030.severity = none
-        void dotnet_style_coalesce_expression(object? arg)
+        // dotnet_diagnostic.IDE0270.severity = none
+        void dotnet_style_coalesce_expression(object? arg, object? x, object? y)
         {
+            // IDE0029 and IDE0030
+            // Code with violation.
             /*
+            var v = x != null ? x : y; // or
+            var v = x == null ? y : x;
+
+            // Fixed code.
+            var v = x ?? y;
+            */
+
+            var v0 = x != null ? x : y; // or
+            var v1 = x == null ? y : x;
+
+            var v2 = x ?? y;
+
+            // IDE0270
             // dotnet_style_coalesce_expression = false
+            /*
             var item = arg as C;
             if (item == null)
                 throw new System.InvalidOperationException();
@@ -365,7 +391,9 @@ namespace Just.EditorConfig.CodeStyle
 
             var item = arg as C;
             if (item == null)
+            {
                 throw new System.InvalidOperationException();
+            }
 
             var item2 = arg as C ?? throw new System.InvalidOperationException();
         }
@@ -413,15 +441,21 @@ namespace Just.EditorConfig.CodeStyle
 
             // dotnet_style_prefer_is_null_check_over_reference_equality_method = true
             if (value is null)
+            {
                 return;
+            }
 
             // dotnet_style_prefer_is_null_check_over_reference_equality_method = false
             if (object.ReferenceEquals(value, null))
+            {
                 return;
+            }
 
             // dotnet_style_prefer_is_null_check_over_reference_equality_method = false
             if ((object)value == null)
+            {
                 return;
+            }
         }
 
         // dotnet_style_prefer_auto_properties = true:suggestion
@@ -731,5 +765,10 @@ namespace Just.EditorConfig.CodeStyle
         }
 
         private int? _s;
+
+        public static void Test_test()
+        {
+
+        }
     }
 }

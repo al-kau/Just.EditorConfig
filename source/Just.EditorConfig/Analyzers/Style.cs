@@ -1,4 +1,6 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿// IDE0073: Require file header
+
+using System.Diagnostics.CodeAnalysis;
 using System.IO;
 
 // IDE0005: Using directive is unnecessary

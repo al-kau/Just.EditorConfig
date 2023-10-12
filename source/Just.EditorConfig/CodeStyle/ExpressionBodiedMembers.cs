@@ -14,7 +14,6 @@
         public int GetAge() { return this.Age; }
         */
 
-        private int _age;
         public int GetAge1() => this.Age;
         public int GetAge2() { return this.Age; }
 
@@ -35,7 +34,7 @@
 
 
         // csharp_style_expression_bodied_operators = false:silent
-        // IDE0023: Use expression body for conversion operators, IDE0024: Use expression body for operators
+        // IDE0023: Use expression body for conversion operators, IDE0024: Use block body for operators
         // dotnet_diagnostic.IDE0023.severity = none
         // dotnet_diagnostic.IDE0024.severity = none
         /*
@@ -68,6 +67,7 @@
         public int Age { get { return _age; }}
         */
 
+        private int _age;
         public int Age { get { return _age; } set { _age = value; } }
         public int Age2 => _age;
 

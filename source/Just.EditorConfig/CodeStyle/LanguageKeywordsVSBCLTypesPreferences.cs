@@ -31,7 +31,6 @@
             var local = Int32.MaxValue;
             */
 
-
             var local1 = int.MaxValue;
             var local2 = Int32.MaxValue;
         }

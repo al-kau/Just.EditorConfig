@@ -59,16 +59,16 @@
             public readonly int X, Y;
         }
         */
-        readonly struct MyPoint1
+        private readonly struct MyPoint1
         {
             public readonly int X, Y;
         }
-        struct MyPoint2
+        private struct MyPoint2
         {
             public readonly int X, Y;
         }
 
-        struct MyPoint3
+        private struct MyPoint3
         {
             public int X, Y;
         }
@@ -85,12 +85,12 @@
         int A2(int n)
         { return n == 0 ? 1 : A2(n - 1); }
         */
-        struct MyPoint
+        private struct MyPoint
         {
-            static int A1(int n)
-            { return n == 0 ? 1 : A1(n-1); }
+            public readonly int A1(int n)
+            { return n == 0 ? 1 : A1(n - 1); }
 
-            int A2(int n)
+            public int A2(int n)
             { return n == 0 ? 1 : A2(n - 1); }
         }
     }
@@ -105,7 +105,7 @@
         private static readonly int _daysInYear = 365;
     }
     */
-    class MyClass
+    public class MyClass
     {
         private static readonly int _daysInYear = 365;
         public virtual async Task<int> FuncAsync()
@@ -137,7 +137,7 @@
     {
         private const string thisFieldIsConst = "constant";
     }
-    class MyClass2
+    internal class MyClass2
     {
         const string thisFieldIsConst = "constant";
     }
@@ -147,7 +147,7 @@
         public int F1();
     }
 
-    interface I2
+    internal interface I2
     {
         int F1();
     }

@@ -16,8 +16,11 @@
         private int GetNum5(int unusedParam) { return 1; }
         */
 
-        public int GetNum1(int unusedParam) { return 1; }
-        internal int GetNum2(int unusedParam) { return 1; }
-        private int GetNum3(int unusedParam) { return 1; }
+        public int GetNum1(int unusedParam)
+        { return 1; }
+        internal int GetNum2(int unusedParam)
+        { return 1; }
+        private int GetNum3(int unusedParam)
+        { return 1; }
     }
 }

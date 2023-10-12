@@ -10,7 +10,7 @@
 namespace Just.EditorConfig.NamingStyle
 {
     //    Enum types use a singular noun for nonflags, and a plural noun for flags.
-    enum EnumName                                                           // rule: pascal_case
+    internal enum EnumName                                                  // rule: pascal_case
     {
         EnumValueNameFirst,                                                 // rule: impossible
         EnumValueNameSecond,                                                // rule: impossible
@@ -18,7 +18,7 @@ namespace Just.EditorConfig.NamingStyle
 
     //    Enum types use a singular noun for nonflags, and a plural noun for flags.
     [Flags]
-    enum EnumNames                                                          // rule: pascal_case
+    internal enum EnumNames                                                 // rule: pascal_case
     {
         EnumValueNameFirstFlag,                                             // rule: impossible
         EnumValueNameSecondFlag,                                            // rule: impossible
@@ -86,12 +86,17 @@ namespace Just.EditorConfig.NamingStyle
 
         public static async Task PublicAsyncTaskMethodNameAsync()           // rule: pascal_case, suffix Async
         {
-            await Task.Delay(100);
+            await Task.Delay(100).ConfigureAwait(false);
         }
 
-        private static async Task PrivateAsyncTaskMethodNameAsync()              // rule: pascal_case, suffix Async
+        private static async Task PrivateAsyncTaskMethodNameAsync()         // rule: pascal_case, suffix Async
         {
-            await Task.Delay(100);
+            await Task.Delay(100).ConfigureAwait(false);
+        }
+
+        private static async void PrivateAsyncVoidMethodName()              // rule: pascal_case, suffix Async
+        {
+            await Task.Delay(100).ConfigureAwait(false);
         }
 
         public static Task PublicTaskMethodName()                           // rule: pascal_case, suffix rule impossible
