@@ -113,7 +113,29 @@ internal class CodeblockPreferences
     }
     */
 
+    // ToDo: example is missing [note: C# 12 feature]
     // csharp_style_prefer_primary_constructors
-    // ToDo: sample
+    // # IDE0290: Use primary constructor
+    // dotnet_diagnostic.IDE0290.severity = error
+
+    // Code with violations
+    //public readonly struct Distance
+    //{
+    //    public readonly double Magnitude { get; }
+    //    public readonly double Direction { get; }
+    //
+    //    public Distance(double dx, double dy)
+    //    {
+    //        Magnitude = Math.Sqrt(dx * dx + dy * dy);
+    //        Direction = Math.Atan2(dy, dx);
+    //    }
+    //}
+
+    // Fixed code
+    //public readonly struct Distance(double dx, double dy)
+    //{
+    //    public readonly double Magnitude { get; } = Math.Sqrt(dx * dx + dy * dy);
+    //    public readonly double Direction { get; } = Math.Atan2(dy, dx);
+    //}
 }
 
