@@ -172,7 +172,7 @@ csharp_style_unused_value_expression_statement_preference = discard_variable:sil
 csharp_prefer_static_local_function = true:warning                                          # IDE0062: Make local function static
 csharp_style_prefer_readonly_struct = true:suggestion                                       # IDE0250: Struct can be made 'readonly'
 csharp_style_prefer_readonly_struct_member = true:suggestion                                # IDE0251: Member can be made 'readonly'
-csharp_preferred_modifier_order = public,private,protected,internal,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:silent        # IDE0036: Order modifiers
+csharp_preferred_modifier_order = public,private,protected,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:silent        # IDE0036: Order modifiers
 
 ## New line preferences
 csharp_style_allow_embedded_statements_on_same_line_experimental = true:silent                      # IDE2001: Allow embedded statements on same line
