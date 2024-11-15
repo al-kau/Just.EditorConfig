@@ -1,4 +1,4 @@
-﻿// IDE0073: Require file header
+// IDE0073: Require file header
 
 using System.Diagnostics.CodeAnalysis;
 using System.IO;

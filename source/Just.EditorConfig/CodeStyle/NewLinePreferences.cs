@@ -1,4 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Just.EditorConfig.CodeStyle
 {

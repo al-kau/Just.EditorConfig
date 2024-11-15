@@ -1,4 +1,4 @@
-﻿using Just.EditorConfig.Whitespace;
+using Just.EditorConfig.Whitespace;
 
 namespace Just.EditorConfig.CodeStyle
 {

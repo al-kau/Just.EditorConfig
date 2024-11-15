@@ -1,4 +1,4 @@
-﻿namespace Just.EditorConfig.Whitespace
+namespace Just.EditorConfig.Whitespace
 {
     internal class SpacePreferences
     {

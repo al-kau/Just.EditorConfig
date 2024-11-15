@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 
 using Microsoft.Extensions.Logging;
 
@@ -46,9 +46,9 @@ namespace Just.EditorConfig.Analyzers
 
         public int Increase()
         {
-            return ++Value_CA1707 + 
-                s_privateReadonlyStaticField + 
-                s_publicReadonlyStaticField + 
+            return ++Value_CA1707 +
+                s_privateReadonlyStaticField +
+                s_publicReadonlyStaticField +
                 _privateConstField +
                 _publicConstField;
         }
@@ -83,7 +83,7 @@ namespace Just.EditorConfig.Analyzers
             return ++s_staticField +
                 ++_field +
                 _readonlyField +
-                ValueCA1707 + 
+                ValueCA1707 +
                 PrivateReadonlyStaticField +
                 PrivateConstField +
                 PublicConstField;
@@ -353,9 +353,9 @@ namespace Just.EditorConfig.Analyzers
 
         public int Value
         {
-            get 
+            get
             {
-                if(s_value is 0)
+                if (s_value is 0)
                 {
                     s_value += 1;
                 }

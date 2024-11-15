@@ -1,4 +1,4 @@
-﻿namespace Just.EditorConfig.CodeStyle
+namespace Just.EditorConfig.CodeStyle
 {
     internal class VarPreferences
     {

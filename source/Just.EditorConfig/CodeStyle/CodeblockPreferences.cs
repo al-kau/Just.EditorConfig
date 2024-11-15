@@ -1,4 +1,4 @@
-﻿// csharp_style_namespace_declarations = block_scoped:silent
+// csharp_style_namespace_declarations = block_scoped:silent
 // IDE0160: Use block-scoped namespace, IDE0161: Use file-scoped namespace
 // dotnet_diagnostic.IDE0160.severity = none
 // dotnet_diagnostic.IDE0161.severity = none
