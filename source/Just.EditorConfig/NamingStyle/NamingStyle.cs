@@ -1,4 +1,4 @@
-﻿//    Attribute types end with the word Attribute.
+//    Attribute types end with the word Attribute.
 //    Identifiers shouldn't contain two consecutive underscore (_) characters. Those names are reserved for compiler-generated identifiers.
 //    Use meaningful and descriptive names for variables, methods, and classes.
 //    Avoid using single-letter names, except for simple loop counters.See exceptions for syntax examples noted in the following section.

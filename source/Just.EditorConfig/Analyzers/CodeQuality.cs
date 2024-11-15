@@ -1,4 +1,4 @@
-﻿
+
 // IDE0076: Invalid target '~F:Just.EditorConfig.Analyzers.CodeQuality.Fake' - no matching field named 'Fake'
 using System.Diagnostics.CodeAnalysis;
 

@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 
 using Just.EditorConfig.Whitespace;
 
@@ -741,6 +741,20 @@ namespace Just.EditorConfig.CodeStyle
 
             // dotnet_style_prefer_simplified_interpolation = false
             var str1 = $"prefix {someValue.ToString()} suffix";
+        }
+
+        // dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion
+        // IDE0300: Use collection expression for array
+        // dotnet_diagnostic.IDE0300.severity = none
+        void dotnet_style_prefer_collection_expression()
+        {
+            // Code with violations.
+            int[] i0 = new int[] { 1, 2, 3 };
+            IEnumerable<int> j0 = new int[] { 1, 2, 3 };
+
+            // Fixed code.
+            int[] i1 = [1, 2, 3];
+            IEnumerable<int> j1 = [1, 2, 3];
         }
 
         // dotnet_style_namespace_match_folder = true:suggestion

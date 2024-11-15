@@ -1,4 +1,4 @@
-﻿namespace Just.EditorConfig.CodeStyle
+namespace Just.EditorConfig.CodeStyle
 {
     internal class ModifierPreferences
     {
@@ -42,6 +42,23 @@
                 Console.WriteLine("Hello");
             }
         }
+
+        // csharp_prefer_static_anonymous_function = true:suggestion
+        // IDE0320: Make anonymous function static
+        // dotnet_diagnostic.IDE0062.severity = none
+
+        void csharp_prefer_static_anonymous_function()
+        {
+            // Code with violations.
+            M(x => x + 1);
+            M(delegate (int x) { return x + 1; });
+
+            // Fixed code.
+            M(static x => x + 1);
+            M(static delegate (int x) { return x + 1; });
+        }
+
+        static void M(Func<int, int> f) { }
 
         // csharp_style_prefer_readonly_struct = true:suggestion
         // IDE0250: Struct can be made 'readonly'

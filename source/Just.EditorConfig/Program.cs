@@ -1,4 +1,4 @@
-﻿namespace Just.EditorConfig
+namespace Just.EditorConfig
 {
     internal class Program
     {
