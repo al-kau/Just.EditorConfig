@@ -113,29 +113,40 @@ internal class CodeblockPreferences
     }
     */
 
-    // ToDo: example is missing [note: C# 12 feature]
-    // csharp_style_prefer_primary_constructors
+    // csharp_style_prefer_primary_constructors = true:suggestion
     // # IDE0290: Use primary constructor
-    // dotnet_diagnostic.IDE0290.severity = error
+    // dotnet_diagnostic.IDE0290.severity = none
 
-    // Code with violations
-    //public readonly struct Distance
-    //{
-    //    public readonly double Magnitude { get; }
-    //    public readonly double Direction { get; }
-    //
-    //    public Distance(double dx, double dy)
-    //    {
-    //        Magnitude = Math.Sqrt(dx * dx + dy * dy);
-    //        Direction = Math.Atan2(dy, dx);
-    //    }
-    //}
+    // Code with violations.
+    class C
+    {
+        public C(int i) { }
+    }
 
-    // Fixed code
-    //public readonly struct Distance(double dx, double dy)
-    //{
-    //    public readonly double Magnitude { get; } = Math.Sqrt(dx * dx + dy * dy);
-    //    public readonly double Direction { get; } = Math.Atan2(dy, dx);
-    //}
+    // Fixed code.
+    class F(int i)
+    {
+    }
+
+    // csharp_prefer_system_threading_lock = true:suggestion
+    // # IDE0330: Prefer 'System.Threading.Lock'
+    // dotnet_diagnostic.IDE0330.severity = none
+
+    // Code with violations.
+    private readonly object _gate0 = new object();
+
+    void M0()
+    {
+        lock (_gate0) { }
+    }
+
+
+    // Fixed code.
+    private readonly Lock _gate1 = new Lock();
+
+    void M1()
+    {
+        lock (_gate1) { }
+    }
 }
 

@@ -10,6 +10,8 @@ root = true
 #### All files ####
 [*]
 
+charset = utf-8
+
 ## Indentation and spacing
 indent_style = space
 tab_width = 4
@@ -17,23 +19,22 @@ indent_size = 4
 trim_trailing_whitespace = true
 
 ## New line preferences
-end_of_line = unset
+end_of_line = crlf
 insert_final_newline = true
 
 
 #### Specific files ####
 
 ## Code files
-[*.{cs,csx,vb,vbx}]
-indent_size = 4
-insert_final_newline = true
-charset = utf-8-bom
+[*.{cs,csx}]
+end_of_line = unset
 
 ## C++ Files
 [*.{cpp,h,in}]
 indent_size = 4
 curly_bracket_next_line = true
 indent_brace_style = Allman
+end_of_line = unset
 
 ## Xml project files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,nativeproj,locproj}]
@@ -140,7 +141,8 @@ csharp_prefer_braces = true:silent                                  # IDE0011: A
 csharp_style_namespace_declarations = block_scoped:silent           # IDE0160: Use block-scoped namespace, IDE0161: Use file-scoped namespace
 csharp_style_prefer_method_group_conversion = true:silent           # IDE0200: Remove unnecessary lambda expression
 csharp_style_prefer_top_level_statements = true:silent              # IDE0210: Convert to top-level statements, IDE0211: Convert to 'Program.Main' style program
-csharp_style_prefer_primary_constructors = true:error               # IDE0290  Use primary constructor [note: C# 12 feature]
+csharp_style_prefer_primary_constructors = true:suggestion          # IDE0290: Use primary constructor [note: C# 12 feature]
+csharp_prefer_system_threading_lock = true:suggestion               # IDE0330: Prefer 'System.Threading.Lock' [note: C# 13+ feature]
 
 ## Expression-bodied members
 csharp_style_expression_bodied_methods = false:silent               # IDE0022: Use expression body for methods
@@ -170,6 +172,7 @@ csharp_style_unused_value_expression_statement_preference = discard_variable:sil
 
 ## Modifier preferences
 csharp_prefer_static_local_function = true:warning                                          # IDE0062: Make local function static
+csharp_prefer_static_anonymous_function = true:suggestion                                   # IDE0320: Make anonymous function static
 csharp_style_prefer_readonly_struct = true:suggestion                                       # IDE0250: Struct can be made 'readonly'
 csharp_style_prefer_readonly_struct_member = true:suggestion                                # IDE0251: Member can be made 'readonly'
 csharp_preferred_modifier_order = public,private,protected,internal,file,static,extern,new,virtual,abstract,sealed,override,readonly,unsafe,volatile,async:silent        # IDE0036: Order modifiers
@@ -228,6 +231,7 @@ dotnet_style_prefer_inferred_tuple_names = true:suggestion                      
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion                  # IDE0037: Use inferred member names
 dotnet_style_prefer_compound_assignment = true:suggestion                                   # IDE0054: Use compound assignment, IDE0074: Use coalesce compound assignment
 dotnet_style_prefer_simplified_interpolation = true:suggestion                              # IDE0071: Simplify interpolation
+dotnet_style_prefer_collection_expression = when_types_loosely_match:suggestion             # IDE0300: Use collection expression for array [note: .NET 9+ feature]
 dotnet_style_namespace_match_folder = true:suggestion                                       # IDE0130: Namespace does not match folder structure
 dotnet_style_prefer_foreach_explicit_cast_in_source = when_strongly_typed:suggestion        # IDE0220: Add explicit cast in foreach loop
 
@@ -574,7 +578,10 @@ dotnet_code_quality.api_surface = all
 # dotnet_diagnostic.IDE0260.severity = none         # IDE0260: Use pattern matching
 # dotnet_diagnostic.IDE0270.severity = none         # IDE0270: Null check can be simplified (if null check)
 # dotnet_diagnostic.IDE0280.severity = none         # IDE0280: Use 'nameof'
-# dotnet_diagnostic.IDE0290.severity = error        # IDE0290  Use primary constructor [note: C# 12 feature]
+# dotnet_diagnostic.IDE0290.severity = none         # IDE0290: Use primary constructor [note: C# 12+ feature]
+# dotnet_diagnostic.IDE0300.severity = none         # IDE0300: Use collection expression for array [note: .NET 9+ feature]
+# dotnet_diagnostic.IDE0320.severity = none         # IDE0320: Make anonymous function static
+# dotnet_diagnostic.IDE0330.severity = none         # IDE0330: Prefer 'System.Threading.Lock' [note: C# 13+ feature]
 # dotnet_diagnostic.IDE1005.severity = none         # IDE1005: Use conditional delegate call
 # dotnet_diagnostic.IDE1006.severity = none         # IDE1006: Naming styles
 # dotnet_diagnostic.IDE2000.severity = none         # IDE2000: Allow multiple blank lines
